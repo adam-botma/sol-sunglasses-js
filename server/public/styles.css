@@ -1,0 +1,34 @@
+.title{
+  margin-left: .3rem;
+}
+
+.container{
+  margin: 2rem auto;
+}
+
+.card{
+  margin-bottom: 1rem;
+}
+
+.product-name{
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.price{
+  font-size: 10px;
+  line-height: 12px;
+  color: #666666;
+}
+
+.description{
+  font-size: 10px;
+  line-height: 12px;
+  color: #000000;
+}
+
+.card-img-top {
+    height: 20vw;
+    object-fit: contain;
+}
