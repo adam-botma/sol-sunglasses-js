@@ -7,6 +7,8 @@ class ProductList extends React.Component {
     this.state = {
       products: []
     };
+    this.setView = props.setView;
+
     this.getProducts = this.getProducts.bind(this);
   }
 
@@ -24,13 +26,13 @@ class ProductList extends React.Component {
 
   render() {
     if (!this.state.products[0]) {
-      return <h1>loading.....</h1>;
+      return <div></div>;
     }
     return (
       <div className="container d-flex flex-wrap">
         {this.state.products.map(product => {
           return (
-            <div className="col-12 col-sm-10 col-md-4" key={product.productId}>
+            <div className="col-12 col-sm-10 col-md-4" key={product.productId} onClick={() => this.setView('details', { productId: product.productId })}>
               <ProductListItem name = {product.name}
                 image={product.image} price ={product.price} shortDesc = {product.shortDescription} />
             </div>

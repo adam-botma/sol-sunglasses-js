@@ -2,14 +2,20 @@
 import React from 'react';
 import Header from './header';
 import ProductList from './product-list';
+import ProductDetails from './product-details';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       message: null,
-      isLoading: true
+      isLoading: true,
+      view: {
+        name: 'catalog',
+        params: {}
+      }
     };
+    this.setView = this.setView.bind(this);
   }
 
   componentDidMount() {
@@ -20,11 +26,17 @@ export default class App extends React.Component {
       .finally(() => this.setState({ isLoading: false }));
   }
 
+  setView(incomingName, incommingParams) {
+    this.setState({ view: { name: incomingName, params: incommingParams } });
+  }
+
   render() {
+    const currentView = this.state.view.name === 'catalog';
     return (
       <div>
         <Header />
-        <ProductList/>
+        {currentView ? <ProductList setView={this.setView} /> : <ProductDetails productId={this.state.view.params.productId} setView={this.setView}/>}
+
       </div>
     );
   }

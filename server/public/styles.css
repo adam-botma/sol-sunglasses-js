@@ -6,6 +6,8 @@
   margin: 2rem auto;
 }
 
+/* Product List */
+
 .card{
   margin-bottom: 1rem;
 }
@@ -31,4 +33,25 @@
 .card-img-top {
     height: 20vw;
     object-fit: contain;
+}
+
+.prod-img-dsc-pg> img{
+  width:100%;
+}
+
+/* DETAILS PAGE */
+
+.product-name-dp{
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.product-price-dp{
+  margin-top: 1rem;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.long-description, .short-desc-dp{
+  margin-top: 2rem;
 }
