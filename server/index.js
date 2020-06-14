@@ -5,6 +5,7 @@ const db = require('./database');
 const ClientError = require('./client-error');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');
+const { response } = require('express');
 
 const app = express();
 
@@ -50,6 +51,89 @@ app.get('/api/products/:productId', (req, res, next) => {
       } else {
         res.status(200).json(response.rows[0]);
       }
+    })
+    .catch(err => next(err));
+
+});
+
+app.get('/api/cart', (req, res, next) => {
+  if (!req.session.cartId) {
+    return res.status(200).json([]);
+  }
+  const getAllCartItems = `
+  select "c"."cartItemId",
+       "c"."price",
+       "p"."productId",
+       "p"."image",
+       "p"."name",
+       "p"."shortDescription"
+  from "cartItems" as "c"
+  join "products" as "p" using ("productId")
+ where "c"."cartId" = $1
+  `;
+  db.query(getAllCartItems, [req.session.cartId])
+    .then(response => res.status(200).json(response.rows));
+
+});
+
+app.post('/api/cart', (req, res, next) => {
+  const productId = parseInt(req.body.productId);
+  if (!Number.isInteger(productId) || productId <= 0) {
+    return res.status(400).json({ error: 'productId must be a positive integer' });
+  }
+  const checkForPriceSQL = `
+  select "price"
+  from "products"
+  where "productId" = $1;
+  `;
+
+  db.query(checkForPriceSQL, [productId])
+    .then(response => {
+      if (!response.rows[0]) {
+        next(new ClientError(`a product with ID: ${productId} does not exist`, 404));
+      }
+      const price = response.rows[0].price;
+      const newRowSQL = `
+      insert into "carts" ("cartId", "createdAt")
+      values (default, default)
+      returning "cartId";
+      `;
+      return db.query(newRowSQL)
+        .then(response => {
+          const newInfo = { productPrice: price, cartId: response.rows[0].cartId };
+          return newInfo;
+        });
+
+    })
+    .then(newInfo => {
+      let currentCart;
+      if (req.session.cartId) {
+        currentCart = req.session.cartId;
+      } else {
+        currentCart = newInfo.cartId;
+        req.session.cartId = newInfo.cartId;
+      }
+      const cartItemsSQL = `
+      insert into "cartItems" ("cartId", "productId", "price")
+      values ($1, $2, $3)
+      returning "cartItemId";`;
+      return db.query(cartItemsSQL, [currentCart, productId, newInfo.productPrice]);
+    })
+    .then(response => {
+
+      const cartItemInfoSQL = `
+      select "c"."cartItemId",
+      "c"."price",
+      "p"."productId",
+      "p"."image",
+      "p"."name",
+      "p"."shortDescription"
+      from "cartItems" as "c"
+      join "products" as "p" using ("productId")
+      where "c"."cartItemId" = $1;
+      `;
+      return db.query(cartItemInfoSQL, [response.rows[0].cartItemId])
+        .then(response => res.status(201).json(response.rows[0]));
     })
     .catch(err => next(err));
 
