@@ -55,3 +55,13 @@
 .long-description, .short-desc-dp{
   margin-top: 2rem;
 }
+
+/* CART SUMMARY */
+
+.summary-price{
+  margin: 1rem 0;
+}
+
+.cart-title{
+  margin: 1.5rem 0
+}
