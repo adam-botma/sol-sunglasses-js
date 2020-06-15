@@ -6,6 +6,7 @@ class ProductDetails extends React.Component {
     this.state = {
       product: null
     };
+    this.addToCart = props.addToCart;
     this.setView = props.setView;
     this.productId = props.productId;
   }
@@ -33,6 +34,7 @@ class ProductDetails extends React.Component {
                 <h1 className="product-name-dp">{this.state.product.name}</h1>
                 <h3 className="product-price-dp">${(this.state.product.price / 100).toFixed(2)}</h3>
                 <p className="short-desc-dp">{this.state.product.shortDescription}</p>
+                <button className="btn btn-primary" onClick={() => this.addToCart(this.state.product)}>Add to Cart</button>
               </div>
               <p className="long-description"> {this.state.product.longDescription}</p>
             </div>

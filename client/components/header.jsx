@@ -8,10 +8,15 @@ class Header extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark">
+
         <a className="navbar-brand d-flex align-items-center" href="#">
           <i className="fas fa-dollar-sign fa-lg"></i>
           <h3 className = "title">Wicked Sales</h3>
         </a>
+        <div className="d-flex text-light">
+          <p>{this.props.cartItemCount} items</p>
+          <i className="fas fa-shopping-cart fa-lg"></i>
+        </div>
       </nav>
 
     );
