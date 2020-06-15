@@ -5,7 +5,6 @@ const db = require('./database');
 const ClientError = require('./client-error');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');
-const { response } = require('express');
 
 const app = express();
 
@@ -98,6 +97,10 @@ app.post('/api/cart', (req, res, next) => {
       values (default, default)
       returning "cartId";
       `;
+      if (req.session.cartId) {
+        const currentInfo = { productPrice: price, cartId: req.session.cartId };
+        return currentInfo;
+      }
       return db.query(newRowSQL)
         .then(response => {
           const newInfo = { productPrice: price, cartId: response.rows[0].cartId };
@@ -106,18 +109,14 @@ app.post('/api/cart', (req, res, next) => {
 
     })
     .then(newInfo => {
-      let currentCart;
-      if (req.session.cartId) {
-        currentCart = req.session.cartId;
-      } else {
-        currentCart = newInfo.cartId;
+      if (!req.session.cartId) {
         req.session.cartId = newInfo.cartId;
       }
       const cartItemsSQL = `
       insert into "cartItems" ("cartId", "productId", "price")
       values ($1, $2, $3)
       returning "cartItemId";`;
-      return db.query(cartItemsSQL, [currentCart, productId, newInfo.productPrice]);
+      return db.query(cartItemsSQL, [newInfo.cartId, productId, newInfo.productPrice]);
     })
     .then(response => {
 
