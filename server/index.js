@@ -33,6 +33,27 @@ app.get('/api/products', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.post('/api/orders', (req, res, next) => {
+  if (!req.session.cartId) {
+    return res.status(400).json({ error: 'this is no cartId associated with this session' });
+  }
+  if (!req.body.creditCard || !req.body.name || !req.body.shippingAddress) {
+    return res.status(400).json({ error: 'all orders must have: Customer Name, Customer Address, Credit Card info' });
+  }
+  const orderSQL = `
+     insert into "orders" ("cartId", "name", "creditCard", "shippingAddress")
+      values ($1, $2, $3, $4)
+      returning *;`;
+
+  db.query(orderSQL, [req.session.cartId, req.body.name, req.body.creditCard, req.body.shippingAddress])
+    .then(response => {
+      delete response.rows[0].cartId;
+      delete req.session.cartId;
+      res.status(201).json(response.rows[0]);
+    })
+    .catch(err => next(err));
+});
+
 app.get('/api/products/:productId', (req, res, next) => {
   const productId = parseInt(req.params.productId);
   if (!Number.isInteger(productId) || productId <= 0) {
