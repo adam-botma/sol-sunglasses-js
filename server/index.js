@@ -89,7 +89,7 @@ app.post('/api/cart', (req, res, next) => {
   db.query(checkForPriceSQL, [productId])
     .then(response => {
       if (!response.rows[0]) {
-        next(new ClientError(`a product with ID: ${productId} does not exist`, 404));
+        throw new ClientError(`a product with ID: ${productId} does not exist`, 404);
       }
       const price = response.rows[0].price;
       const newRowSQL = `
@@ -109,9 +109,7 @@ app.post('/api/cart', (req, res, next) => {
 
     })
     .then(newInfo => {
-      if (!req.session.cartId) {
-        req.session.cartId = newInfo.cartId;
-      }
+      req.session.cartId = newInfo.cartId;
       const cartItemsSQL = `
       insert into "cartItems" ("cartId", "productId", "price")
       values ($1, $2, $3)
