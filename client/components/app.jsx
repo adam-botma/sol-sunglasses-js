@@ -5,6 +5,7 @@ import ProductList from './product-list';
 import ProductDetails from './product-details';
 import CartSummary from './cart-summary';
 import CheckoutForm from './checkout-form';
+import MainCarousel from './main-carousel';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ export default class App extends React.Component {
   }
 
   getCartItems() {
-    fetch('http://localhost:3000/api/cart')
+    fetch('/api/cart')
       .then(res => res.json())
       .then(data => this.setState({ cart: data }));
   }
@@ -80,8 +81,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Header cartItemCount={this.state.cart.length} setView={this.setView}/>
-        {this.whichView()}
+        <MainCarousel/>
+        {/* <Header cartItemCount={this.state.cart.length} setView={this.setView}/>
+        {this.whichView()} */}
 
       </div>
     );

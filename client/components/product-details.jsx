@@ -12,7 +12,7 @@ class ProductDetails extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:3000/api/products/${this.productId}`)
+    fetch(`/api/products/${this.productId}`)
       .then(res => res.json())
       .then(data => this.setState({ product: data }));
   }
