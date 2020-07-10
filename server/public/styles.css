@@ -1,3 +1,8 @@
+body{
+  font-family: 'Helvetica'!important;
+}
+
+
 .title{
   margin-left: .3rem;
 }
@@ -5,6 +10,110 @@
 .container{
   margin: 2rem auto;
 }
+
+.navbar{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 3rem;
+}
+
+/* Homepage */
+
+.homepage-contaier{
+  height: 100vh;
+  width: 100vh;
+
+}
+
+.hp-btn{
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 3px solid white;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.nav-buttons{
+  margin: 3rem;
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  color: white;
+  pointer-events: none;
+}
+
+.nav-buttons > i {
+  pointer-events: all;
+}
+
+.image-coursel-container{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-carousel{
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 300%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8 ease-in-out;
+}
+
+.move-to-next{
+  transform: translateX(calc(-100%/3));
+  -webkit-transform: translateX(calc(-100%/3));
+}
+
+.move-to-third{
+   transform: translateX(calc((-100%/3*2)));
+  -webkit-transform: translateX(calc((-100%/3*2)));
+}
+
+.images{
+  width: calc(100%/3);
+  height: 100%;
+  background-size: cover;
+}
+
+.image-1{
+  background-image: url('images/front-page-1.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3.jpg');
+
+}
+
+
+
+
+
 
 /* Product List */
 
@@ -76,4 +185,125 @@ label{
 
 input, textarea{
   width: 100%;
+}
+
+
+
+/* Mobile */
+
+
+/* iPhone X */
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iphoneX.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iphoneX.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iphoneX.jpg');
+
+}
+
+.navbar{
+  padding: 2rem;
+}
+
+.nav-buttons{
+  margin: 1rem;
+}
+
+
+ }
+
+ /* iPhone 6/7/8 */
+
+ @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iphone678.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iphone678.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iphone678.jpg');
+
+}
+
+.navbar{
+  padding: 2rem;
+}
+
+.nav-buttons{
+  margin: 1rem;
+}
+
+
+ }
+
+/* iPad */
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iPad.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iPad.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iPad.jpg');
+
+}
+
+
+ }
+
+ @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+  .image-1{
+  background-image: url('images/front-page-1-iPad-landscape.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iPad-landscape.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iPad-landscape.jpg');
+
+}
+
+.navbar{
+  padding: 1.5rem;
+}
+
+.nav-buttons{
+  margin: 1.5rem;
+}
+
+
+
 }

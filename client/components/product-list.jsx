@@ -17,7 +17,7 @@ class ProductList extends React.Component {
   }
 
   getProducts() {
-    fetch('http://localhost:3000/api/products')
+    fetch('/api/products')
       .then(res => res.json())
       .then(data => this.setState({ products: data }))
       .catch(err => console.error(err));
