@@ -53,6 +53,11 @@ body{
   right: 0;
   z-index: 2;
   color: white;
+  pointer-events: none;
+}
+
+.nav-buttons > i {
+  pointer-events: all;
 }
 
 .image-coursel-container{
@@ -105,12 +110,7 @@ body{
 
 }
 
-/* .image-3 > h1 , .image-3 > p, .image-3 > button {
 
-  position: relative;
-  top: 30%;
-  left: 10%;
-} */
 
 
 
@@ -185,4 +185,125 @@ label{
 
 input, textarea{
   width: 100%;
+}
+
+
+
+/* Mobile */
+
+
+/* iPhone X */
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iphoneX.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iphoneX.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iphoneX.jpg');
+
+}
+
+.navbar{
+  padding: 2rem;
+}
+
+.nav-buttons{
+  margin: 1rem;
+}
+
+
+ }
+
+ /* iPhone 6/7/8 */
+
+ @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iphone678.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iphone678.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iphone678.jpg');
+
+}
+
+.navbar{
+  padding: 2rem;
+}
+
+.nav-buttons{
+  margin: 1rem;
+}
+
+
+ }
+
+/* iPad */
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iPad.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iPad.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iPad.jpg');
+
+}
+
+
+ }
+
+ @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+  .image-1{
+  background-image: url('images/front-page-1-iPad-landscape.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iPad-landscape.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iPad-landscape.jpg');
+
+}
+
+.navbar{
+  padding: 1.5rem;
+}
+
+.nav-buttons{
+  margin: 1.5rem;
+}
+
+
+
 }

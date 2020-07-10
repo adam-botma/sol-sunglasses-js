@@ -14,7 +14,7 @@ export default class App extends React.Component {
       message: null,
       isLoading: true,
       view: {
-        name: 'catalog',
+        name: '',
         params: {}
       },
       cart: []
@@ -75,17 +75,18 @@ export default class App extends React.Component {
     if (this.state.view.name === 'checkout') {
       return <CheckoutForm placeOrder={this.placeOrder}cart={this.state.cart} setView={this.setView}/>;
     }
-    return <ProductList setView={this.setView} />;
+    if (this.state.view.name === 'shop') {
+      return <ProductList setView={this.setView} />;
+    }
+    return <MainCarousel setView={this.setView}/>;
   }
 
   render() {
     return (
-      <div>
-        <MainCarousel/>
-        {/* <Header cartItemCount={this.state.cart.length} setView={this.setView}/>
-        {this.whichView()} */}
-
-      </div>
+      <>
+        <Header cartItemCount={this.state.cart.length} setView={this.setView}/>
+        {this.whichView()}
+      </>
     );
   }
 }

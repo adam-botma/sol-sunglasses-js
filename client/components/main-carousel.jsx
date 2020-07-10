@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './header';
 
 class MainCarousel extends React.Component {
   constructor(props) {
@@ -10,6 +9,7 @@ class MainCarousel extends React.Component {
     this.whichImage = this.whichImage.bind(this);
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
+    this.setView = props.setView;
   }
 
   whichImage() {
@@ -47,10 +47,10 @@ class MainCarousel extends React.Component {
   render() {
     return (
       <>
-        <Header/>
         <div className="homepage-container">
           <div className="nav-buttons d-flex align-items-center justify-content-between">
             <i className="fas fa-chevron-left fa-3x" onClick={this.previousImage}></i>
+            <div></div>
             <i className="fas fa-chevron-right fa-3x" onClick={this.nextImage}></i>
           </div>
           <div className="image-carousel-container">
@@ -58,17 +58,20 @@ class MainCarousel extends React.Component {
               <div className="images image-1 d-flex flex-column align-items-center justify-content-center">
                 <h1>TEST TEXT</h1>
                 <p>Small description</p>
-                <button className="hp-btn align-self-center">shop</button>
+                <button onClick={() => this.setView('shop', {})}
+                  className="hp-btn align-self-center">shop</button>
               </div>
               <div className="images image-2 d-flex flex-column align-items-center justify-content-center">
                 <h1>NEW TEXT</h1>
                 <p>Small description</p>
-                <button className="hp-btn align-self-center">shop</button>
+                <button onClick={() => this.setView('shop', {})}
+                  className="hp-btn align-self-center">shop</button>
               </div>
               <div className="images image-3 d-flex flex-column align-items-center justify-content-center">
                 <h1>NEW TEXT 3</h1>
                 <p>Small description</p>
-                <button className="hp-btn align-self-center">shop</button>
+                <button onClick={() => this.setView('shop', {})}
+                  className="hp-btn align-self-center">shop</button>
               </div>
             </div>
           </div>
