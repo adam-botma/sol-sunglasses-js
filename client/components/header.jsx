@@ -15,7 +15,7 @@ class Header extends React.Component {
         <i className="fas fa-bars fa-lg"></i>
 
         <div className="d-flex" onClick={() => this.setView('cart', {})}>
-          {/* <p>{this.props.cartItemCount} items</p> */}
+
           <i className="fas fa-shopping-cart fa-lg">{this.props.cartItemCount}</i>
         </div>
       </nav>
