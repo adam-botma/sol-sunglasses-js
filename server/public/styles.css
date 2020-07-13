@@ -15,7 +15,20 @@ body{
   position: absolute;
   z-index: 2;
   width: 100%;
-  padding: 3rem;
+  padding: 2rem 3rem;
+}
+
+.navbar2{
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 3rem;
+  pointer-events: none;
+}
+
+.navbar2 > i, .navbar2 > div {
+  pointer-events: all;
 }
 
 /* Homepage */

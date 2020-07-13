@@ -25,7 +25,7 @@ class ProductDetails extends React.Component {
 
         <div className="container">
           <div className="desc-head">
-            <div onClick={() => this.setView('catalog', {})}><i className="fas fa-long-arrow-alt-left">Back</i></div>
+            <div onClick={() => this.setView('shop', {})}><i className="fas fa-long-arrow-alt-left">Back</i></div>
             <div className="row">
               <div className="col-7 col-12-md  prod-img-dsc-pg ">
                 <img src={this.state.product.image} alt=""/>

@@ -7,15 +7,15 @@ class Header extends React.Component {
   }
 
   render() {
+    const navColor = this.props.view === '';
     return (
-      <nav className="navbar text-white">
 
-        <a className="navbar-brand d-flex align-items-center text-white " href="#">
-          <i className="fas fa-bars fa-lg"></i>
-          {/* <h3 className = "title">Wicked Sales</h3> */}
-        </a>
-        <div className="d-flex text-light" onClick={() => this.setView('cart', {})}>
-          {/* <p>{this.props.cartItemCount} items</p> */}
+      <nav className={navColor ? 'navbar text-white' : ' navbar navbar2 text-dark'}>
+
+        <i className="fas fa-bars fa-lg"></i>
+
+        <div className="d-flex" onClick={() => this.setView('cart', {})}>
+
           <i className="fas fa-shopping-cart fa-lg">{this.props.cartItemCount}</i>
         </div>
       </nav>
