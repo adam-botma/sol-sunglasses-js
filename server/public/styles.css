@@ -166,11 +166,12 @@ body{
 
 .product-container{
   margin: none;
+  height: 90vh;
 }
 
 .left-side{
   padding: 0;
-  height: 90vh;
+
 }
 
 .add-to-bag{
@@ -251,6 +252,67 @@ input, textarea{
 /* Mobile */
 
 
+ /* iPhone 6/7/8 */
+
+ @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+.image-1{
+  background-image: url('images/front-page-1-iphone678.jpg');
+}
+
+.image-2{
+  background-image: url('images/front-page-2-iphone678.jpg');
+}
+
+.image-3{
+  background-image: url('images/front-page-3-iphone678.jpg');
+
+}
+
+.navbar{
+  padding: 2rem;
+}
+
+.nav-buttons{
+  margin: 1rem;
+}
+
+.product-container{
+  display: flex;
+  height: 50%;
+  flex-direction: column-reverse;
+  justify-content: end;
+  margin-top: 130px;
+}
+
+.left-side{
+  margin-top: 50px;
+
+}
+
+.add-to-bag{
+  height: 7rem;
+}
+
+.product-text {
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+.product-name-dp{
+  margin-bottom: .5rem;
+}
+
+.short-desc-dp{
+  margin-bottom: .5rem;
+}
+
+
+ }
+
 /* iPhone X */
 
 @media only screen
@@ -280,39 +342,17 @@ and (orientation : portrait) {
   margin: 1rem;
 }
 
+.product-container{
+  margin-top: 210px;
+
+}
+
+.left-side{
+  margin-top: 100px;
+}
 
  }
 
- /* iPhone 6/7/8 */
-
- @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-
-.image-1{
-  background-image: url('images/front-page-1-iphone678.jpg');
-}
-
-.image-2{
-  background-image: url('images/front-page-2-iphone678.jpg');
-}
-
-.image-3{
-  background-image: url('images/front-page-3-iphone678.jpg');
-
-}
-
-.navbar{
-  padding: 2rem;
-}
-
-.nav-buttons{
-  margin: 1rem;
-}
-
-
- }
 
 /* iPad */
 
@@ -332,6 +372,37 @@ and (orientation : portrait) {
 .image-3{
   background-image: url('images/front-page-3-iPad.jpg');
 
+}
+
+.product-container{
+  display: flex;
+  height: 50%;
+  flex-direction: column-reverse;
+  justify-content: end;
+  margin-top: 230px;
+}
+
+.left-side{
+  margin-top: 100px;
+
+}
+
+.add-to-bag{
+  height: 10rem;
+}
+
+.product-text {
+  margin: 1rem auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.product-name-dp{
+  margin-bottom: .5rem;
+}
+
+.short-desc-dp{
+  margin-bottom: .5rem;
 }
 
 

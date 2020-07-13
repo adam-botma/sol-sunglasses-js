@@ -24,17 +24,18 @@ class ProductDetails extends React.Component {
       return (
 
         <div className="product-container d-flex">
-          <div className=" left-side col-5 col-12md d-flex flex-column align-items-start justify-content-end">
+          <div className=" left-side col-lg-5 col-12 d-flex flex-column align-items-start justify-content-end">
             <div className="product-text">
               <h1 className="product-name-dp">{this.state.product.name}</h1>
               <p className="short-desc-dp">{this.state.product.shortDescription}</p>
-              <h4 className="product-price-dp">${(this.state.product.price / 100).toFixed(2)}</h4>
+              <h3 className="product-price-dp">${(this.state.product.price / 100).toFixed(2)}</h3>
             </div>
-            <div className="add-to-bag d-flex align-items-center justify-content-center">
+            <div className="add-to-bag d-flex align-items-center justify-content-center"
+              onClick={() => this.addToCart(this.state.product)}>
               <h4>+ Add to bag</h4>
             </div>
           </div>
-          <div className="col-8 col-12-md d-flex align-items-center justify-content-center prod-img-dsc-pg ">
+          <div className="col-lg-8 col-12 d-flex align-items-center justify-content-center prod-img-dsc-pg ">
             <img src='/images/product2-1.png' alt="" />
           </div>
         </div>
