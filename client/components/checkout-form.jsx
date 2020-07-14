@@ -43,7 +43,7 @@ class CheckoutForm extends React.Component {
   render() {
     return (
       <div className="container checkout">
-        <h1>My Cart</h1>
+        <h1>Checkout:</h1>
         <h5>Order Total: ${this.calculateTotal()}</h5>
         <form onSubmit={this.handleSubmit}>
           <div>
@@ -57,11 +57,11 @@ class CheckoutForm extends React.Component {
           <label htmlFor="shippingAddress">Shipping Address:</label>
           <textarea name="shippingAddress" id="shippingAddress" cols="30" rows="10" onChange={this.handleChange}></textarea>
           <div className="d-flex justify-content-between">
-            <div onClick={() => this.setView('catalog', {})}><i className="fas fa-long-arrow-alt-left">Continue Shopping</i></div>
-            <button className="btn btn-primary">Place Order</button>
+            <div onClick={() => this.setView('shop', {})}><i className="fas fa-long-arrow-alt-left">Continue Shopping</i></div>
+            <button className="btn btn-dark">Place Order</button>
           </div>
         </form>
-
+        <p className="disclaimer">PLEASE NOTE: This site is not a live store and is for demonstration only.  Please do not enter actual personal information as no orders will be fufilled.</p>
       </div>
 
     );

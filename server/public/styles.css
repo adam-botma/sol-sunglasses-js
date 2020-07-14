@@ -2,6 +2,11 @@ body{
   font-family: Rubik!important;
 }
 
+.btn-dark{
+  background-color: black!important;
+  border-radius: 0!important;
+  font-family: Rubik!important;
+}
 
 .title{
   margin-left: .3rem;
@@ -32,6 +37,32 @@ body{
   pointer-events: all;
 }
 
+
+
+.shopping-bag{
+  background-image: url('./images/shopping-bag-light.png');
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopping-bag-dark{
+  background-image: url('./images/shopping-bag.png');
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopping-bag > i, .shopping-bag-dark >i {
+  font-size: 12px;
+  margin-top: 10px;
+}
 /* Homepage */
 
 .homepage-contaier{
@@ -241,8 +272,17 @@ margin-bottom: 2rem;
   margin: 1.5rem 0
 }
 
+.back-to-shop{
+  color: #A2A2A2;
+}
+
 .checkout{
   width: 70%;
+}
+
+.disclaimer{
+  color: red;
+  margin-top: 2rem;
 }
 
 label{
@@ -253,7 +293,70 @@ input, textarea{
   width: 100%;
 }
 
+/* Menu */
 
+.menu-closed{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: -20%;
+  transition: left 1s ease-out;
+
+}
+
+.menu-opened{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  transition: left 1s ease-out;
+}
+
+.menu-top{
+  margin: 1rem 1.5rem 0 1.5rem;
+
+
+}
+
+.menu-link{
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: black;
+  height: 45px;
+}
+
+.menu-link > a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+  margin: .5rem 0;
+  cursor: pointer;
+  padding-left: 3rem;
+}
+
+li:hover {
+  background-color: black;
+  color: white;
+}
 
 /* Mobile */
 
@@ -286,12 +389,34 @@ and (orientation : portrait) {
   margin: 1rem;
 }
 
+.desc-head {
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
 .product-container{
   display: flex;
   height: 50%;
   flex-direction: column-reverse;
   justify-content: end;
-  margin-top: 130px;
+  margin-top: 67px;
+  text-align: center;
+}
+
+.product-name-dp{
+  font-size: 25px;
+}
+
+.short-desc-dp{
+  font-size: 12px;
+  line-height: 20px;
+  height: 80px;
+  overflow-y: scroll;
+}
+
+.product-price-dp{
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .left-side{
@@ -314,6 +439,45 @@ and (orientation : portrait) {
 
 .short-desc-dp{
   margin-bottom: .5rem;
+}
+
+.card-img-top {
+    height: 40vw;
+    object-fit: contain;
+}
+
+.menu-closed{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: -100%;
+  transition: left 1s ease-out;
+}
+
+  .menu-opened{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  transition: left 1s ease-out;
+
+}
+
+.container{
+  text-align: center;
+}
+
+.summary-item-mobile{
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -385,7 +549,7 @@ and (orientation : portrait) {
   height: 50%;
   flex-direction: column-reverse;
   justify-content: end;
-  margin-top: 230px;
+  margin-top: 160px;
 }
 
 .left-side{
@@ -410,6 +574,41 @@ and (orientation : portrait) {
 .short-desc-dp{
   margin-bottom: .5rem;
 }
+
+.menu-closed{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 35%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: -35%;
+  transition: left 1s ease-out;
+}
+
+  .menu-opened{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 35%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  transition: left 1s ease-out;
+}
+
+.container{
+  text-align: center;
+}
+
+.summary-item-mobile{
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 
  }
@@ -440,6 +639,29 @@ and (orientation : landscape) {
   margin: 1.5rem;
 }
 
+.menu-closed{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 35%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: -35%;
+  transition: left 1s ease-out;
+}
+
+  .menu-opened{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 35%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  transition: left
 
 
+}
 }
