@@ -20,6 +20,7 @@ class Header extends React.Component {
 
   render() {
     const navColor = this.props.view === '';
+
     return (
       <>
         <Menu menuClicked={this.menuClicked} menuXClicked={this.menuXClicked}
@@ -27,10 +28,8 @@ class Header extends React.Component {
         <nav className={navColor ? 'navbar text-white' : ' navbar navbar2 text-dark'}>
 
           <i className="fas fa-bars fa-lg" onClick={this.menuClicked}></i>
-
-          <div className="d-flex" onClick={() => this.setView('cart', {})}>
-
-            <i className="fas fa-shopping-cart fa-lg">{this.props.cartItemCount}</i>
+          <div className={navColor ? 'shopping-bag' : 'shopping-bag-dark'}onClick={() => this.setView('cart', {})}>
+            <i className={navColor ? 'text-white' : 'text-dark'}>{this.props.cartItemCount}</i>
           </div>
         </nav>
       </>

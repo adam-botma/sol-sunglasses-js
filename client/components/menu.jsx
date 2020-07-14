@@ -4,21 +4,31 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.setView = props.setView;
+    this.menuItemClicked = this.menuItemClicked.bind(this);
+  }
+
+  menuItemClicked(item) {
+    this.setView(item, {});
+    this.props.menuXClicked();
+
   }
 
   render() {
-    const menuClass = this.props.isOpened ? 'menu-opened' : 'menu-closed ';
+    const menuClass = this.props.isOpened ? 'menu-opened' : 'menu-closed d-flex flex-column ';
 
     return (
       <div className={menuClass}>
-        <p onClick={this.props.menuXClicked}>X</p>
-        <h1>Menu</h1>
+        <div className="menu-top d-flex align-items-center justify-content-between">
+          <h1 onClick={() => this.menuItemClicked('')}>Menu</h1>
+          <p onClick={this.props.menuXClicked}>X</p>
+        </div>
         <ul>
-          <li>Shop</li>
-          <li>Shopping Bag</li>
-          <li>adambotma.com</li>
+          <li onClick={() => this.menuItemClicked('shop')}>Shop</li>
+          <li onClick={() => this.menuItemClicked('cart')}>Shopping Bag</li>
         </ul>
-
+        <div className="menu-link d-flex align-items-center justify-content-center">
+          <a className="website" href='http://adambotma.com'>adambotma.com</a>
+        </div>
       </div>
 
     );
