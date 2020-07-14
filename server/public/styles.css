@@ -1,5 +1,5 @@
 body{
-  font-family: 'Helvetica'!important;
+  font-family: Rubik!important;
 }
 
 
@@ -132,17 +132,18 @@ body{
 /* Product List */
 
 .card{
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  border: none;
 }
 
 .product-name{
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 14px;
   color: #000000;
 }
 
 .price{
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   color: #666666;
 }
@@ -154,7 +155,7 @@ body{
 }
 
 .card-img-top {
-    height: 20vw;
+    height: 10vw;
     object-fit: contain;
 }
 
@@ -188,6 +189,11 @@ font-style: normal;
 font-weight: bold;
 font-size: 36px;
 line-height: 43px;
+}
+
+.desc-head{
+  padding-left: 7rem;
+  color: #A2A2A2;
 }
 
 .product-text{
