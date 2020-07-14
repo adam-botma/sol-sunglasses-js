@@ -2,6 +2,11 @@ body{
   font-family: Rubik!important;
 }
 
+.btn-dark{
+  background-color: black!important;
+  border-radius: 0!important;
+  font-family: Rubik!important;
+}
 
 .title{
   margin-left: .3rem;
@@ -241,8 +246,17 @@ margin-bottom: 2rem;
   margin: 1.5rem 0
 }
 
+.back-to-shop{
+  color: #A2A2A2;
+}
+
 .checkout{
   width: 70%;
+}
+
+.disclaimer{
+  color: red;
+  margin-top: 2rem;
 }
 
 label{
@@ -253,6 +267,31 @@ input, textarea{
   width: 100%;
 }
 
+/* Menu */
+
+.menu-closed{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: -20%;
+  transition: left 1s ease-out;
+}
+
+.menu-opened{
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 20%;
+  margin: 0;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  transition: left 1s ease-out;
+}
 
 
 /* Mobile */

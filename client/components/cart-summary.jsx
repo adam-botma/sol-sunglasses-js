@@ -12,8 +12,8 @@ class CartSummary extends React.Component {
     if (!this.cart[0]) {
       return (
         <div>
-          <div onClick={() => this.setView('catalog', {})}><i className="fas fa-long-arrow-alt-left">Back to Catalog</i></div>
-          <h1 className="cart-title">My Cart</h1>
+          <div className="back-to-shop" onClick={() => this.setView('shop', {})}><i className="fas fa-long-arrow-alt-left">Shop more</i></div>
+          <h3 className="cart-title">My Bag</h3>
           <div>
             <h1>Your Cart is currently empty...</h1>
           </div>
@@ -26,13 +26,13 @@ class CartSummary extends React.Component {
       return (<CartSummaryItem key={cartItem.cartItemId}name={cartItem.name} image={cartItem.image} price={cartItem.price} shortDesc={cartItem.shortDescription} />);
     });
     return (<div className="container">
-      <div onClick={() => this.setView('catalog', {})}><i className="fas fa-long-arrow-alt-left">Back to Catalog</i></div>
-      <h1 className="cart-title">My Cart</h1>
+      <div className="back-to-shop" onClick={() => this.setView('shop', {})}><i className="fas fa-long-arrow-alt-left">Shop more</i></div>
+      <h3 className="cart-title">My Bag</h3>
       <div>
         {currentSummary}
       </div>
       <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
-      <button className="btn btn-primary" onClick={() => this.setView('checkout', {})}>Checkout</button>
+      <button className="btn btn-dark" onClick={() => this.setView('checkout', {})}>Checkout</button>
     </div>
     );
   }
