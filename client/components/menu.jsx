@@ -19,7 +19,7 @@ class Menu extends React.Component {
     return (
       <div className={menuClass}>
         <div className="menu-top d-flex align-items-center justify-content-between">
-          <h1 onClick={() => this.menuItemClicked('')}>Menu</h1>
+          <h1 onClick={() => this.menuItemClicked('')}>SOL</h1>
           <p onClick={this.props.menuXClicked}>X</p>
         </div>
         <ul>
