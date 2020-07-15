@@ -5,7 +5,7 @@ A full stack Node.js and React shopping cart app
 
 ## Live Demo
 
-https://sol-sunglasses.adambotma.com
+https://sol-sunglasses.adambotma.com/
 
 
 ## Technologies Used
