@@ -56,22 +56,22 @@ class MainCarousel extends React.Component {
           <div className="image-carousel-container">
             <div className={this.whichImage()}>
               <div className="images image-1 d-flex flex-column align-items-center justify-content-center">
-                <h1>TEST TEXT</h1>
-                <p>Small description</p>
+                <h1>New Styles</h1>
+                <p>now live on the site</p>
                 <button onClick={() => this.setView('shop', {})}
-                  className="hp-btn align-self-center">shop</button>
+                  className="hp-btn align-self-center">shop now</button>
               </div>
               <div className="images image-2 d-flex flex-column align-items-center justify-content-center">
-                <h1>NEW TEXT</h1>
-                <p>Small description</p>
+                <h1>New Styles</h1>
+                <p>now live on the site</p>
                 <button onClick={() => this.setView('shop', {})}
-                  className="hp-btn align-self-center">shop</button>
+                  className="hp-btn align-self-center">shop now</button>
               </div>
               <div className="images image-3 d-flex flex-column align-items-center justify-content-center">
-                <h1>NEW TEXT 3</h1>
-                <p>Small description</p>
+                <h1>New Styles</h1>
+                <p>now live on the site</p>
                 <button onClick={() => this.setView('shop', {})}
-                  className="hp-btn align-self-center">shop</button>
+                  className="hp-btn align-self-center">shop now</button>
               </div>
             </div>
           </div>
