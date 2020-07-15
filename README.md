@@ -41,4 +41,4 @@ Homepage View:
 
 Product Pages:
 
-![](server/public/images/product-details.gif)
+![](server/public/images/product-details-1.gif)
