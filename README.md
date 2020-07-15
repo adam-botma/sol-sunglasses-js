@@ -38,3 +38,7 @@ https://sol-sunglasses.adambotma.com/
 Homepage View:
 
 ![](server/public/images/homepage-view.gif)
+
+Product Pages:
+
+![](server/public/images/product-details.gif)
