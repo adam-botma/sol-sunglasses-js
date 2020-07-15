@@ -27,3 +27,11 @@ https://sol-sunglasses.adambotma.com/
   
 
 ## Further Development Plans 
+* Add image carousel to product details page to show multiple product images.
+* Re-style the product listing page to have a more magazine style layout. 
+* Create functionality for users to remove items from their cart. 
+* Improve mobile layout for the view cart page.
+* Improve empty cart page
+
+## Screenshots
+
