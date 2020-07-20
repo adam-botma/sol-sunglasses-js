@@ -1,29 +1,38 @@
-body{
+body {
   font-family: Rubik!important;
 }
 
-.btn-dark{
+nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
+.fa-chevron-right:hover, .fa-chevron-left:hover, .card:hover, div > .fa-long-arrow-alt-left:hover,
+.add-to-bag:hover{
+  cursor: pointer;
+}
+
+
+
+
+.btn-dark {
   background-color: black!important;
   border-radius: 0!important;
   font-family: Rubik!important;
 }
 
-.title{
+.title {
   margin-left: .3rem;
 }
 
-.container{
+.container {
   margin: 2rem auto;
 }
 
-.navbar{
+.navbar {
   position: absolute;
   z-index: 2;
   width: 100%;
   padding: 2rem 3rem;
 }
 
-.navbar2{
+.navbar2 {
   height: 10vh;
   position: static;
   top: 0;
@@ -39,7 +48,7 @@ body{
 
 
 
-.shopping-bag{
+.shopping-bag {
   background-image: url('./images/shopping-bag-light.png');
   background-position: center;
   height: 40px;
@@ -49,7 +58,7 @@ body{
   justify-content: center;
 }
 
-.shopping-bag-dark{
+.shopping-bag-dark {
   background-image: url('./images/shopping-bag.png');
   background-position: center;
   height: 40px;
@@ -65,13 +74,13 @@ body{
 }
 /* Homepage */
 
-.homepage-contaier{
+.homepage-contaier {
   height: 100vh;
   width: 100vh;
 
 }
 
-.hp-btn{
+.hp-btn {
   display: inline-block;
   font-weight: 400;
   color: white;
@@ -89,7 +98,7 @@ body{
   text-align: center;
 }
 
-.nav-buttons{
+.nav-buttons {
   margin: 3rem;
   position: absolute!important;
   top: 0;
@@ -101,7 +110,7 @@ body{
   pointer-events: none;
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
 }
 
@@ -109,13 +118,13 @@ body{
   pointer-events: all;
 }
 
-.image-coursel-container{
+.image-coursel-container {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-.image-carousel{
+.image-carousel {
   position: absolute!important;
   top: 0;
   left: 0;
@@ -130,36 +139,36 @@ body{
   -webkit-transition: 0.8 ease-in-out;
 }
 
-.move-to-next{
+.move-to-next {
   transform: translateX(calc(-100%/3));
   -webkit-transform: translateX(calc(-100%/3));
 }
 
-.move-to-third{
+.move-to-third {
    transform: translateX(calc((-100%/3*2)));
   -webkit-transform: translateX(calc((-100%/3*2)));
 }
 
-.images{
+.images {
   width: calc(100%/3);
   height: 100%;
   background-size: cover;
 }
 
-.image-1{
+.image-1 {
   background-image: url('images/front-page-1.jpg');
 }
 
-.image-2{
+.image-2 {
   background-image: url('images/front-page-2.jpg');
 }
 
-.image-3{
+.image-3 {
   background-image: url('images/front-page-3.jpg');
 
 }
 
-.start-modal{
+.start-modal {
   position: absolute;
   height: 250px;
   width: 500px;
@@ -175,7 +184,7 @@ body{
   border: solid 10px red;
 }
 
-.modal-message-container > h3{
+.modal-message-container > h3 {
   color: red;
 }
 
@@ -195,13 +204,13 @@ body{
   color: #000000;
 }
 
-.price{
+.price {
   font-size: 12px;
   line-height: 12px;
   color: #666666;
 }
 
-.description{
+.description {
   font-size: 10px;
   line-height: 12px;
   color: #000000;
@@ -212,30 +221,30 @@ body{
     object-fit: contain;
 }
 
-.prod-img-dsc-pg> img{
+.prod-img-dsc-pg> img {
   width:80%;
 }
 
 /* DETAILS PAGE */
 
-.product-container{
+.product-container {
   margin: none;
   height: 90vh;
 }
 
-.left-side{
+.left-side {
   padding: 0;
 
 }
 
-.add-to-bag{
+.add-to-bag {
   width: 100%;
   height: 10rem;
   background-color: #000000;
 
 }
 
-.add-to-bag > h4{
+.add-to-bag > h4 {
   color: white;
   font-family: Rubik;
 font-style: normal;
@@ -244,17 +253,17 @@ font-size: 36px;
 line-height: 43px;
 }
 
-.desc-head{
+.desc-head {
   padding-left: 7rem;
   color: #A2A2A2;
 }
 
-.product-text{
+.product-text {
   margin-bottom: 5rem;
   padding: 0 7rem;
 }
 
-.product-name-dp{
+.product-name-dp {
 font-family: Rubik;
 font-style: normal;
 font-weight: bold;
@@ -264,7 +273,7 @@ color: #000000;
 margin-bottom: 2rem;
 }
 
-.product-price-dp{
+.product-price-dp {
 font-family: Rubik;
 font-style: normal;
 font-weight: 500;
@@ -273,7 +282,7 @@ line-height: 38px;
 color: #000000;
 }
 
-.long-description, .short-desc-dp{
+.long-description, .short-desc-dp {
 
 font-family: Rubik;
 font-style: normal;
@@ -286,38 +295,38 @@ margin-bottom: 2rem;
 
 /* CART SUMMARY */
 
-.summary-price{
+.summary-price {
   margin: 1rem 0;
 }
 
-.cart-title{
+.cart-title {
   margin: 1.5rem 0
 }
 
-.back-to-shop{
+.back-to-shop {
   color: #A2A2A2;
 }
 
-.checkout{
+.checkout {
   width: 70%;
 }
 
-.disclaimer{
+.disclaimer {
   color: red;
   margin-top: 2rem;
 }
 
-label{
+label {
   display: block;
 }
 
-input, textarea{
+input, textarea {
   width: 100%;
 }
 
 /* Menu */
 
-.menu-closed{
+.menu-closed {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -330,7 +339,7 @@ input, textarea{
 
 }
 
-.menu-opened{
+.menu-opened {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -342,13 +351,13 @@ input, textarea{
   transition: left 1s ease-out;
 }
 
-.menu-top{
+.menu-top {
   margin: 1rem 1.5rem 0 1.5rem;
 
 
 }
 
-.menu-link{
+.menu-link {
   margin-top: 1.5rem;
   width: 100%;
   background-color: black;
@@ -390,24 +399,24 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
 
-.image-1{
+.image-1 {
   background-image: url('images/front-page-1-iphone678.jpg');
 }
 
-.image-2{
+.image-2 {
   background-image: url('images/front-page-2-iphone678.jpg');
 }
 
-.image-3{
+.image-3 {
   background-image: url('images/front-page-3-iphone678.jpg');
 
 }
 
-.navbar{
+.navbar {
   padding: 2rem;
 }
 
-.nav-buttons{
+.nav-buttons {
   margin: 1rem;
 }
 
@@ -416,7 +425,7 @@ and (orientation : portrait) {
     margin-top: 1rem;
 }
 
-.product-container{
+.product-container {
   display: flex;
   height: 50%;
   flex-direction: column-reverse;
@@ -425,28 +434,28 @@ and (orientation : portrait) {
   text-align: center;
 }
 
-.product-name-dp{
+.product-name-dp {
   font-size: 25px;
 }
 
-.short-desc-dp{
+.short-desc-dp {
   font-size: 12px;
   line-height: 20px;
   height: 80px;
   overflow-y: scroll;
 }
 
-.product-price-dp{
+.product-price-dp {
   font-size: 20px;
   line-height: 30px;
 }
 
-.left-side{
+.left-side {
   margin-top: 50px;
 
 }
 
-.add-to-bag{
+.add-to-bag {
   height: 7rem;
 }
 
@@ -455,11 +464,11 @@ and (orientation : portrait) {
   padding: 0 2rem;
 }
 
-.product-name-dp{
+.product-name-dp {
   margin-bottom: .5rem;
 }
 
-.short-desc-dp{
+.short-desc-dp {
   margin-bottom: .5rem;
 }
 
@@ -468,7 +477,7 @@ and (orientation : portrait) {
     object-fit: contain;
 }
 
-.menu-closed{
+.menu-closed {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -480,7 +489,7 @@ and (orientation : portrait) {
   transition: left 1s ease-out;
 }
 
-  .menu-opened{
+  .menu-opened {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -490,24 +499,20 @@ and (orientation : portrait) {
   top: 0;
   left: 0;
   transition: left 1s ease-out;
-
 }
 
-.container{
+.container {
   text-align: center;
 }
 
-.summary-item-mobile{
+.summary-item-mobile {
   align-items: center;
   justify-content: center;
 }
 
-.start-modal{
-
-
+.start-modal {
   height: 270px;
   width: 375px;
-
 }
 
 }
@@ -520,37 +525,37 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
 
-.image-1{
+.image-1 {
   background-image: url('images/front-page-1-iphoneX.jpg');
 }
 
-.image-2{
+.image-2 {
   background-image: url('images/front-page-2-iphoneX.jpg');
 }
 
-.image-3{
+.image-3 {
   background-image: url('images/front-page-3-iphoneX.jpg');
 
 }
 
-.navbar{
+.navbar {
   padding: 2rem;
 }
 
-.nav-buttons{
+.nav-buttons {
   margin: 1rem;
 }
 
-.product-container{
+.product-container {
   margin-top: 155px;
 
 }
 
-.left-side{
+.left-side {
   margin-top: 100px;
 }
 
-.add-to-bag{
+.add-to-bag {
   height: 7rem;
 }
 
@@ -559,11 +564,11 @@ and (orientation : portrait) {
   padding: 0 2rem;
 }
 
-.product-name-dp{
+.product-name-dp {
   margin-bottom: .5rem;
 }
 
-.short-desc-dp{
+.short-desc-dp {
   margin-bottom: .5rem;
 }
 
@@ -572,7 +577,7 @@ and (orientation : portrait) {
     object-fit: contain;
 }
 
-.menu-closed{
+.menu-closed {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -584,7 +589,7 @@ and (orientation : portrait) {
   transition: left 1s ease-out;
 }
 
-  .menu-opened{
+  .menu-opened {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -597,11 +602,11 @@ and (orientation : portrait) {
 
 }
 
-.container{
+.container {
   text-align: center;
 }
 
-.summary-item-mobile{
+.summary-item-mobile {
   align-items: center;
   justify-content: center;
 }
@@ -617,20 +622,20 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 
-.image-1{
+.image-1 {
   background-image: url('images/front-page-1-iPad.jpg');
 }
 
-.image-2{
+.image-2 {
   background-image: url('images/front-page-2-iPad.jpg');
 }
 
-.image-3{
+.image-3 {
   background-image: url('images/front-page-3-iPad.jpg');
 
 }
 
-.product-container{
+.product-container {
   display: flex;
   height: 50%;
   flex-direction: column-reverse;
@@ -638,12 +643,12 @@ and (orientation : portrait) {
   margin-top: 160px;
 }
 
-.left-side{
+.left-side {
   margin-top: 100px;
 
 }
 
-.add-to-bag{
+.add-to-bag {
   height: 10rem;
 }
 
@@ -653,15 +658,15 @@ and (orientation : portrait) {
   padding: 0 2rem;
 }
 
-.product-name-dp{
+.product-name-dp {
   margin-bottom: .5rem;
 }
 
-.short-desc-dp{
+.short-desc-dp {
   margin-bottom: .5rem;
 }
 
-.menu-closed{
+.menu-closed {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -673,7 +678,7 @@ and (orientation : portrait) {
   transition: left 1s ease-out;
 }
 
-  .menu-opened{
+  .menu-opened {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -685,11 +690,11 @@ and (orientation : portrait) {
   transition: left 1s ease-out;
 }
 
-.container{
+.container {
   text-align: center;
 }
 
-.summary-item-mobile{
+.summary-item-mobile {
   align-items: center;
   justify-content: center;
 }
@@ -704,28 +709,28 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
 
-  .image-1{
+  .image-1 {
   background-image: url('images/front-page-1-iPad-landscape.jpg');
 }
 
-.image-2{
+.image-2 {
   background-image: url('images/front-page-2-iPad-landscape.jpg');
 }
 
-.image-3{
+.image-3 {
   background-image: url('images/front-page-3-iPad-landscape.jpg');
 
 }
 
-.navbar{
+.navbar {
   padding: 1.5rem;
 }
 
-.nav-buttons{
+.nav-buttons {
   margin: 1.5rem;
 }
 
-.menu-closed{
+.menu-closed {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -735,9 +740,9 @@ and (orientation : landscape) {
   top: 0;
   left: -35%;
   transition: left 1s ease-out;
-}
+ }
 
-  .menu-opened{
+  .menu-opened {
   position: absolute;
   background-color: white;
   height: 100%;
@@ -749,5 +754,5 @@ and (orientation : landscape) {
   transition: left
 
 
-}
+  }
 }
