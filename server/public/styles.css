@@ -4,12 +4,9 @@ body {
 
 nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
 .fa-chevron-right:hover, .fa-chevron-left:hover, .card:hover, div > .fa-long-arrow-alt-left:hover,
-.add-to-bag:hover{
+.add-to-bag:hover {
   cursor: pointer;
 }
-
-
-
 
 .btn-dark {
   background-color: black!important;
@@ -752,7 +749,5 @@ and (orientation : landscape) {
   top: 0;
   left: 0;
   transition: left
-
-
   }
 }
