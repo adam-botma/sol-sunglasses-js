@@ -10,6 +10,7 @@ class MainCarousel extends React.Component {
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
     this.setView = props.setView;
+    this.closeStartMessage = this.props.closeStartMessage;
   }
 
   whichImage() {
@@ -45,8 +46,19 @@ class MainCarousel extends React.Component {
   }
 
   render() {
+    const modalDisplay = this.props.startMessage ? 'start-modal' : 'start-modal hidden';
     return (
       <>
+        <div className={modalDisplay}>
+          <div className="modal-message-container">
+            <h3>Notice:</h3>
+            <p>This app is created for demonstration purposes only. By
+               clicking the button below, you acknowledge that no purchases will be made,
+                no payment processing will be done, and actual personal information
+                should not be used at checkout.</p>
+            <button onClick={this.closeStartMessage}>Accept</button>
+          </div>
+        </div>
         <div className="homepage-container">
           <div className="nav-buttons d-flex align-items-center justify-content-between">
             <i className="fas fa-chevron-left fa-3x" onClick={this.previousImage}></i>
