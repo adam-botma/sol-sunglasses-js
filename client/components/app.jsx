@@ -11,6 +11,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      startMessage: true,
       message: null,
       isLoading: true,
       view: {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
+    this.closeStartMessage = this.closeStartMessage.bind(this);
 
   }
 
@@ -42,6 +44,10 @@ export default class App extends React.Component {
 
   setView(incomingName, incommingParams) {
     this.setState({ view: { name: incomingName, params: incommingParams } });
+  }
+
+  closeStartMessage() {
+    this.setState({ startMessage: false });
   }
 
   addToCart(product) {
@@ -78,7 +84,7 @@ export default class App extends React.Component {
     if (this.state.view.name === 'shop') {
       return <ProductList setView={this.setView} />;
     }
-    return <MainCarousel setView={this.setView}/>;
+    return <MainCarousel closeStartMessage={this.closeStartMessage} startMessage={this.state.startMessage} setView={this.setView}/>;
   }
 
   render() {

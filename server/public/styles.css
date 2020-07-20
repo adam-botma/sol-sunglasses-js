@@ -101,6 +101,10 @@ body{
   pointer-events: none;
 }
 
+.hidden{
+  visibility: hidden;
+}
+
 .nav-buttons > i {
   pointer-events: all;
 }
@@ -155,7 +159,25 @@ body{
 
 }
 
+.start-modal{
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  padding: 0 1rem;
+  border: solid 10px red;
+}
 
+.modal-message-container > h3{
+  color: red;
+}
 
 
 
@@ -480,8 +502,15 @@ and (orientation : portrait) {
   justify-content: center;
 }
 
+.start-modal{
 
- }
+
+  height: 270px;
+  width: 375px;
+
+}
+
+}
 
 /* iPhone X */
 
