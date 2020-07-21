@@ -73,17 +73,22 @@ export default class App extends React.Component {
 
   whichView() {
     if (this.state.view.name === 'cart') {
+      document.body.style.overflow = 'hidden scroll';
       return <CartSummary cart={this.state.cart} setView={this.setView}/>;
     }
     if (this.state.view.name === 'details') {
+      document.body.style.overflow = 'hidden';
       return <ProductDetails addToCart={this.addToCart} productId={this.state.view.params.productId} setView={this.setView} />;
     }
     if (this.state.view.name === 'checkout') {
+      document.body.style.overflow = 'hidden scroll';
       return <CheckoutForm placeOrder={this.placeOrder}cart={this.state.cart} setView={this.setView}/>;
     }
     if (this.state.view.name === 'shop') {
+      document.body.style.overflow = 'hidden scroll';
       return <ProductList setView={this.setView} />;
     }
+    document.body.style.overflow = 'hidden';
     return <MainCarousel closeStartMessage={this.closeStartMessage} startMessage={this.state.startMessage} setView={this.setView}/>;
   }
 

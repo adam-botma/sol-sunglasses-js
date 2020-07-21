@@ -1,6 +1,14 @@
 body {
   font-family: Rubik!important;
-  overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
@@ -22,6 +30,8 @@ nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
 .container {
   margin: 2rem auto;
 }
+
+/* HEADER */
 
 .navbar {
   position: absolute;
@@ -404,6 +414,8 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
 
+
+
 .image-1 {
   background-image: url('images/front-page-1-iphone678.jpg');
 }
@@ -515,9 +527,22 @@ and (orientation : portrait) {
   justify-content: center;
 }
 
-.start-modal {
+.modal-message-container {
   height: 270px;
   width: 375px;
+}
+
+.mobile-checkout{
+  width: 90%;
+  height: 60px;
+}
+
+.mobile-checkout-form{
+  flex-direction: column;
+}
+
+.mobile-checkout-form > p {
+  margin-top: 16px;
 }
 
 }
