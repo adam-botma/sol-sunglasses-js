@@ -33,7 +33,7 @@ class CartSummary extends React.Component {
           {currentSummary}
         </div>
         <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
-        <button className="btn btn-dark" onClick={() => this.setView('checkout', {})}>Checkout</button>
+        <button className="btn btn-dark mobile-checkout" onClick={() => this.setView('checkout', {})}>Checkout</button>
       </div>
     );
   }
