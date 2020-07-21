@@ -1,9 +1,10 @@
 body {
   font-family: Rubik!important;
+  overflow: hidden;
 }
 
 nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
-.fa-chevron-right:hover, .fa-chevron-left:hover, .card:hover, div > .fa-long-arrow-alt-left:hover,
+.fa-chevron-right:hover, .fa-chevron-left:hover, .product-card:hover, div > .fa-long-arrow-alt-left:hover,
 .add-to-bag:hover {
   cursor: pointer;
 }
@@ -43,8 +44,6 @@ nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
   pointer-events: all;
 }
 
-
-
 .shopping-bag {
   background-image: url('./images/shopping-bag-light.png');
   background-position: center;
@@ -69,6 +68,7 @@ nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
   font-size: 12px;
   margin-top: 10px;
 }
+
 /* Homepage */
 
 .homepage-contaier {
@@ -167,25 +167,33 @@ nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
 
 .start-modal {
   position: absolute;
-  height: 250px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
   z-index: 7;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
-  margin: auto;
+  background-color: rgba(0,0,0,0.5 );
   text-align: center;
   padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal-message-container{
+  background-color: white;
+  height: 250px;
+  width: 500px;
   border: solid 10px red;
+  margin: auto;
 }
 
 .modal-message-container > h3 {
   color: red;
 }
-
-
 
 
 /* Product List */
@@ -230,7 +238,7 @@ nav > i:hover , nav > div:hover , .menu-top > h1:hover , .menu-top > p:hover,
 }
 
 .left-side {
-  padding: 0;
+  padding: 0 0 20px 0;
 
 }
 
@@ -695,10 +703,6 @@ and (orientation : portrait) {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
  }
 
  @media only screen

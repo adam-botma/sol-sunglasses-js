@@ -50,7 +50,7 @@ class MainCarousel extends React.Component {
     return (
       <>
         <div className={modalDisplay}>
-          <div className="modal-message-container">
+          <div className="modal-message-container d-flex flex-column align-items-center justify-content-center">
             <h3>Notice:</h3>
             <p>This app is created for demonstration purposes only. By
                clicking the button below, you acknowledge that no purchases will be made,
