@@ -2,6 +2,8 @@ body {
   font-family: Rubik!important;
 }
 
+
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -547,6 +549,42 @@ and (orientation : portrait) {
 
 }
 
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape){
+
+.menu-closed {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 40%;
+    margin: 0;
+    z-index: 6;
+    top: 0;
+    left: -45%;
+    transition: left 1s ease-out;
+}
+
+.menu-opened {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 40%;
+    margin: 0;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    transition: left 1s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+}
+
 /* iPhone X */
 
 @media only screen
@@ -779,4 +817,10 @@ and (orientation : landscape) {
   left: 0;
   transition: left
   }
+}
+
+html, body {
+  position:relative;
+  overflow-x:hidden;
+  height: 100%;
 }
